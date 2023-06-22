@@ -29,5 +29,20 @@ Task: Infer the value of the cell marked with "?"
 
 ```
 
+# Build
+
+```
+$ git clone https://github.com/usptact/Infer.NET-Pyramid.git
+$ cd Infer.NET-Pyramid
+$ dotnet build -c Debug Pyramid.sln
+```
+
+# Run
+
+```
+$ dotnet run --project Pyramid
+```
+
 # Credits
 The problem is taken from [UKMT Junior Maths Challenge 2022](https://www.youtube.com/watch?v=K_BCGD-ijOY)
+
