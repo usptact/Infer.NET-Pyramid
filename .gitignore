@@ -406,3 +406,14 @@ ASALocalRun/
 
 GeneratedSource/
 
+# .NET 8 / SDK local state
+.nuget/
+*.svclog
+
+# Editors/IDEs
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+

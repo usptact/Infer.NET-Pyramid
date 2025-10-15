@@ -1,5 +1,6 @@
 ﻿using Microsoft.ML.Probabilistic.Algorithms;
 using Microsoft.ML.Probabilistic.Models;
+using Microsoft.ML.Probabilistic.Compiler;
 
 namespace Pyramid {
     class Program {
@@ -103,6 +104,8 @@ namespace Pyramid {
             // infer l0_3
 
             InferenceEngine engine = new InferenceEngine();
+            // Force Roslyn compiler to avoid CodeDOM, which is unsupported on some platforms
+            engine.Compiler.CompilerChoice = CompilerChoice.Roslyn;
             engine.NumberOfIterations = 100;
             engine.Algorithm = new ExpectationPropagation();
 
