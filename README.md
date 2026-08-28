@@ -29,5 +29,17 @@ Task: Infer the value of the cell marked with "?"
 
 ```
 
+The exact answer is `4`. This project instead *infers* it with
+[Infer.NET](https://dotnet.github.io/infer/) by modelling every cell as a random
+variable and running Expectation Propagation.
+
+# Running
+
+```
+dotnet run --project Pyramid -c Release
+```
+
+Requires the .NET 10 SDK. Uses Infer.NET (`Microsoft.ML.Probabilistic`) 0.4.2504.701.
+
 # Credits
 The problem is taken from [UKMT Junior Maths Challenge 2022](https://www.youtube.com/watch?v=K_BCGD-ijOY)
