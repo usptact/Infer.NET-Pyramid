@@ -406,3 +406,14 @@ ASALocalRun/
 
 # Infer.NET generated inference source
 GeneratedSource/
+
+# SDK local state
+.nuget/
+*.svclog
+
+# Editors/IDEs
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store

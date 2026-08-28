@@ -1,4 +1,5 @@
 using Microsoft.ML.Probabilistic.Algorithms;
+using Microsoft.ML.Probabilistic.Compiler;
 using Microsoft.ML.Probabilistic.Distributions;
 using Microsoft.ML.Probabilistic.Models;
 
@@ -73,6 +74,8 @@ var engine = new InferenceEngine(new ExpectationPropagation())
 {
     NumberOfIterations = 100,
 };
+// Force the Roslyn compiler; the legacy CodeDOM backend is unsupported on some platforms.
+engine.Compiler.CompilerChoice = CompilerChoice.Roslyn;
 
 Gaussian[] basePosterior = engine.Infer<Gaussian[]>(baseLayer);
 Console.WriteLine($"Dist over ? (base-layer middle cell) = {basePosterior[2]}");
