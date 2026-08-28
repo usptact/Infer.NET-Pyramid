@@ -404,9 +404,10 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 
+# Infer.NET generated inference source
 GeneratedSource/
 
-# .NET 8 / SDK local state
+# SDK local state
 .nuget/
 *.svclog
 
@@ -416,4 +417,3 @@ GeneratedSource/
 
 # OS-specific
 .DS_Store
-
